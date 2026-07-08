@@ -1,9 +1,12 @@
 import React from "react";
+import Initial from "./left/Initial";
+import Name from "./left/Name";
+import Photo from "./left/Photo";
 
 function LeftSection() {
     return (
         <>
-            <section className="min-h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms]">
+            <section className="min-h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms] border-r border-dashed">
                 {/* Noise overlay */}
                 <div
                     className="absolute inset-0 pointer-events-none"
@@ -13,10 +16,10 @@ function LeftSection() {
                         backgroundRepeat: "repeat",
                     }}
                 />
-
-                {/* Sample text to preview against the matte bg */}
-                <div className="relative z-10  h-full items-center justify-center p-8">
-                   
+                <div className="p-4 ">
+                    <Initial />
+                    <Name />
+                    <Photo />
                 </div>
             </section>
         </>

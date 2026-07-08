@@ -30,7 +30,7 @@
     --main: #0A0A0A;
     --surface: #121212;
 
-    --foreground: #E5E5E5;
+    --foreground: #B8B8B8;
     --muted: #8A8A8A;
 
     --border: #222222;
@@ -39,6 +39,10 @@
 }
 
 
-/*
-  DARK -> 
-*/
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
