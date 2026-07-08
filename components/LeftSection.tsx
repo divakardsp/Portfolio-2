@@ -3,8 +3,10 @@ import Initial from "./left/Initial";
 import Name from "./left/Name";
 import Photo from "./left/Photo";
 import Cta from "./left/Cta";
+import Socials from "./left/Socials";
 
 function LeftSection() {
+    
     return (
         <>
             <section className="min-h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms] border-r border-dashed">
@@ -17,11 +19,12 @@ function LeftSection() {
                         backgroundRepeat: "repeat",
                     }}
                 />
-                <div className="p-4 border border-1">
+                <div className="p-4 ">
                     <Initial />
                     <Name />
                     <Photo />
                     <Cta/>
+                    <Socials/>
                 </div>
             </section>
         </>
