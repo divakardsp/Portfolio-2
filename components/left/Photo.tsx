@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Photo() {
     return (
-        <div className="m-8 flex justify-center ">
+        <div className="m-8 flex justify-center border border-1 ">
             <div className="relative h-64 w-64 rounded-full bg-surface border border-dashed">
                 <div
                     className="absolute inset-0 rounded-full pointer-events-none opacity-10"

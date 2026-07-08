@@ -17,7 +17,7 @@ function LeftSection() {
                         backgroundRepeat: "repeat",
                     }}
                 />
-                <div className="p-4 ">
+                <div className="p-4 border border-1">
                     <Initial />
                     <Name />
                     <Photo />

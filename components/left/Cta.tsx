@@ -4,7 +4,7 @@ import { PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 
 function Cta() {
     return (
-        <div className="m-8 ">
+        <div className="m-8 border border-1 ">
             <div className="p-8 flex flex-1 items-center justify-around">
                 <button
                     className="

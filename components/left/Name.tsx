@@ -3,7 +3,7 @@ import React from "react";
 function Name() {
     return (
         <>
-            <div className="m-8 inline-block  p-3 flex flex-col ">
+            <div className="m-8 inline-block  p-3 flex flex-col border border-1 ">
                 <h1 className=" relative pl-8 text-5xl font-medium tracking-tighter text-foreground">
                     Divakar Singh Purva
                 </h1>
