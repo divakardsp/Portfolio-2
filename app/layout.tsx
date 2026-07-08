@@ -32,7 +32,7 @@ export default function RootLayout({
     <html
 
       lang="en"
-      className={`dark`}
+      className={``}
     >
       <body className={`${inter.className}`}>{children}</body>
     </html>
