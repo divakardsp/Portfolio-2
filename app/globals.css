@@ -10,6 +10,8 @@
 
     --color-border: var(--border);
     --color-accent: var(--accent);
+    --color-cta:var(--cta);
+
 }
 
 :root {
@@ -20,9 +22,11 @@
     --foreground: #151412;
     --muted: #524E46;
 
-    --border: #D1CDC1;
+    --border: #B5B1A5;
 
     --accent: #059669;
+    --cta: #F4F1EA;
+
 }
 
 .dark {
@@ -36,6 +40,8 @@
     --border: #222222;
 
     --accent: #10B981;
+    --cta: #1A1A1A;
+
 }
 
 

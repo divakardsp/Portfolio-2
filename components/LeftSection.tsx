@@ -2,6 +2,7 @@ import React from "react";
 import Initial from "./left/Initial";
 import Name from "./left/Name";
 import Photo from "./left/Photo";
+import Cta from "./left/Cta";
 
 function LeftSection() {
     return (
@@ -20,6 +21,7 @@ function LeftSection() {
                     <Initial />
                     <Name />
                     <Photo />
+                    <Cta/>
                 </div>
             </section>
         </>
