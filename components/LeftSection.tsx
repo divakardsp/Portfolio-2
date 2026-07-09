@@ -6,7 +6,6 @@ import Cta from "./left/Cta";
 import Socials from "./left/Socials";
 
 function LeftSection() {
-    
     return (
         <>
             <section className="min-h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms] border-r border-dashed">
@@ -23,8 +22,8 @@ function LeftSection() {
                     <Initial />
                     <Name />
                     <Photo />
-                    <Cta/>
-                    <Socials/>
+                    <Cta />
+                    <Socials />
                 </div>
             </section>
         </>
