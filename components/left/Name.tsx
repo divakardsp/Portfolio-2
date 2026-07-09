@@ -4,7 +4,7 @@ function Name() {
     return (
         <>
             <div className="m-8 inline-block  p-3 flex flex-col ">
-                <h1 className=" relative pl-8 text-5xl font-medium tracking-tighter text-foreground">
+                <h1 className=" relative pl-8 text-5xl font-medium tracking-tighter text-foreground transition-colors duration-[100ms]">
                     Divakar Singh Purva
                 </h1>
 
@@ -13,10 +13,11 @@ function Name() {
                 </h3>
 
                 <div
-                    className="ml-8 mt-4
-        inline-flex items-center justify-center gap-2 mt-4 px-3 py-1.5 
+                    className="inline-flex items-center justify-center gap-2 
+        ml-8 mt-4 px-3 py-1.5 
         rounded-full border border-dashed border-border bg-surface 
-        text-sm font-extralight text-foreground
+        text-sm font-extralight text-foreground 
+        transition-colors duration-100
     "
                 >
                     {/* Blinking Dot */}

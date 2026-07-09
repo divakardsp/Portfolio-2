@@ -9,7 +9,7 @@ function Navbar() {
     const isDark = resolvedTheme === "dark";
     return (
         <nav className="m-8">
-            <div className=" w-2xl m-auto bg-surface border border-1 border-border border-dashed rounded-4xl">
+            <div className=" w-2xl m-auto bg-surface border border-1 border-border border-dashed rounded-4xl transition-colors duration-100">
                 <ul className="flex flex-1 justify-between items-center px-5 py-3">
                     <li>
                         <a className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg font-light tracking-tight  ">
