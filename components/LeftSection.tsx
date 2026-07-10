@@ -8,7 +8,7 @@ import Socials from "./left/Socials";
 function LeftSection() {
     return (
         <>
-            <section className="min-h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms] border-r border-dashed">
+            <section className="sticky top-0 h-screen w-2/5 bg-sidebar text-muted relative overflow-hidden transition-colors duration-[700ms] border-r border-dashed">
                 {/* Noise overlay */}
                 <div
                     className="absolute inset-0 pointer-events-none"
