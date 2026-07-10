@@ -32,7 +32,7 @@ function SkillsTools() {
     return (
         <div className="mt-15 mx-8 m-auto p-3">
             <div className="mb-8" >
-                <h1 className="text-3xl font-light text-foreground">Skills</h1>
+                <h1 className="text-3xl font-light text-foreground">Skills & Tools</h1>
                 <div className="mt-5 flex flex-wrap gap-2">
                     {skills.map((item) => {
                         const source =
