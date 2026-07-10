@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./right/Navbar";
 import SkillsTools from "./right/SkillsTools";
 import About from "./right/About";
+import Projects from "./right/Projects";
 
 function RightSection() {
     return (
@@ -11,6 +12,7 @@ function RightSection() {
                     <Navbar />
                     <SkillsTools/>
                     <About />
+                    <Projects />
                 </div>
             </section>
         </>
