@@ -1,6 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function SkillsTools() {
     const skills = [
@@ -21,39 +23,56 @@ function SkillsTools() {
         { name: "Socket.IO", logo: "/Socketio.svg" },
         { name: "Docker", logo: "/Docker.svg" },
         { name: "AWS", logo: "/Aws.svg" },
-        { name: "Git", logo: "/Git.svg"},
-        { name: "Github", logo: "/Github.svg"},
-        { name: "Gitlab", logo: "/Gitlab.svg"},
-        { name: "Postman", logo: "/Postman.svg"},
-        { name: "Requestly", logo: "/Requestly.svg"}
+        { name: "Git", logo: "/Git.svg" },
+        { name: "Linux", logo: "/Linux.svg" },
+        { name: "Github", logo: "/Github.svg" },
+        { name: "Gitlab", logo: "/Gitlab.svg" },
+        { name: "Postman", logo: "/Postman.svg" },
+        { name: "Requestly", logo: "/Requestly.svg" },
     ];
 
-
-    const dark = ["Next.js", "Express", "Drizzle", "Kafka", "Socket.IO"];
+    const dark = ["Next.js", "Express", "Drizzle", "Kafka", "Socket.IO", "Linux"];
 
     const { theme, resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        console.log("Not mounted yet");
+        return null;
+    }
+
     const isDarkMode = resolvedTheme === "dark";
+
+    console.log("Theme: ", theme);
+    console.log("resolved: ", resolvedTheme);
 
     return (
         <div className="mt-15 mx-8 m-auto p-3">
-            <div className="mb-8" >
-                <h1 className="text-3xl font-light text-foreground">Skills & Tools</h1>
+            <div className="mb-8">
+                <h1 className="text-3xl font-light text-foreground">
+                    Skills & Tools
+                </h1>
                 <div className="mt-5 flex flex-wrap gap-2">
                     {skills.map((item) => {
                         const source =
                             dark.includes(item.name) && isDarkMode
                                 ? `/${item.name}-Light.svg`
                                 : item.logo;
-
+                        console.log(`${item.name} : ${source}`);
                         return (
                             <div
                                 key={item.name}
                                 className="flex items-center gap-2 rounded-2xl border border-dashed border-border bg-surface px-4 py-3 text-foreground "
                             >
                                 <img
+                                    key={source}
                                     src={source}
                                     alt={`${item.name} logo`}
-                                    className="w-6 h-6 object-contain"
+                                    className="w-6 h-6object-contain"
                                 />
                                 <span className="text-sm font-light">
                                     {item.name}
