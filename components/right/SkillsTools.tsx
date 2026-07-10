@@ -21,6 +21,11 @@ function SkillsTools() {
         { name: "Socket.IO", logo: "/Socketio.svg" },
         { name: "Docker", logo: "/Docker.svg" },
         { name: "AWS", logo: "/Aws.svg" },
+        { name: "Git", logo: "/Git.svg"},
+        { name: "Github", logo: "/Github.svg"},
+        { name: "Gitlab", logo: "/Gitlab.svg"},
+        { name: "Postman", logo: "/Postman.svg"},
+        { name: "Requestly", logo: "/Requestly.svg"}
     ];
 
 
