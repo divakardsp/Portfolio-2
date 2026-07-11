@@ -4,6 +4,7 @@ import SkillsTools from "./right/SkillsTools";
 import About from "./right/About";
 import Projects from "./right/Projects";
 import Experience from "./right/Experience";
+import Footer from "./Footer";
 
 function RightSection() {
     return (
@@ -15,6 +16,7 @@ function RightSection() {
                     <About />
                     <Projects />
                     <Experience />
+                    <Footer />
                 </div>
             </section>
         </>
