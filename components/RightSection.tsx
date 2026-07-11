@@ -3,6 +3,7 @@ import Navbar from "./right/Navbar";
 import SkillsTools from "./right/SkillsTools";
 import About from "./right/About";
 import Projects from "./right/Projects";
+import Experience from "./right/Experience";
 
 function RightSection() {
     return (
@@ -13,6 +14,7 @@ function RightSection() {
                     <SkillsTools/>
                     <About />
                     <Projects />
+                    <Experience />
                 </div>
             </section>
         </>
