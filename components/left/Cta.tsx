@@ -5,7 +5,7 @@ import { PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 function Cta() {
     return (
         <div className="m-8 ">
-            <div className="p-8 flex flex-1 items-center justify-around">
+            <div className="p-8 flex flex-1 gap-2 items-center justify-around">
                 <a
                     href="/resume.pdf"
                     target="_blank"
@@ -42,7 +42,7 @@ function Cta() {
                             group-hover:rotate-3
                         "
                     />
-                    <span>View Resume / CV</span>
+                    <span>View Resume</span>
                 </a>
                 <a
                     href="mailto:divakarpurva04@gmail.com"

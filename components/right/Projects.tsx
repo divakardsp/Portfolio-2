@@ -87,7 +87,7 @@ function Projects() {
     ];
 
     return (
-        <div className="mx-8 m-auto p-3">
+        <div className="mx-4 lg:mx-8 m-auto p-3">
             <h1 className="mb-4 text-3xl font-light text-foreground">
                 Projects
             </h1>
@@ -115,7 +115,10 @@ function Projects() {
                     <br />
 
                     {project.highlights.map((highlight) => (
-                        <p key={highlight.id} className="font-light tracking-normal leading-7">{`- ${highlight.value}`}</p>
+                        <p
+                            key={highlight.id}
+                            className="font-light tracking-normal leading-7"
+                        >{`- ${highlight.value}`}</p>
                     ))}
                 </div>
             ))}

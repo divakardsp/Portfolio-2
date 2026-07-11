@@ -80,7 +80,7 @@ export default function SocialLinks() {
     ];
 
     return (
-        <div className="m-8 w-1/2 m-auto ">
+        <div className="my-4 lg:my-8 w-full lg:w-1/2 mx-auto ">
             <div className="flex flex-1 justify-around items-center">
                 {socialLinks.map((social) => {
                     return (

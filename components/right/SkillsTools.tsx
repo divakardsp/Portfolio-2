@@ -31,7 +31,14 @@ function SkillsTools() {
         { name: "Requestly", logo: "/Requestly.svg" },
     ];
 
-    const dark = ["Next.js", "Express", "Drizzle", "Kafka", "Socket.IO", "Linux"];
+    const dark = [
+        "Next.js",
+        "Express",
+        "Drizzle",
+        "Kafka",
+        "Socket.IO",
+        "Linux",
+    ];
 
     const { theme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -51,7 +58,7 @@ function SkillsTools() {
     console.log("resolved: ", resolvedTheme);
 
     return (
-        <div className="mt-15 mx-8 m-auto p-3">
+        <div className="mt-15 mx-4 lg:mx-8 m-auto p-3">
             <div className="mb-8">
                 <h1 className="text-3xl font-light text-foreground">
                     Skills & Tools

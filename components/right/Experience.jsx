@@ -21,14 +21,14 @@ const workHistory = [
 
 export default function Experience() {
     return (
-        <div className="mx-8 my-8 m-auto p-3 ">
+        <div className="mx-4 lg:mx-8 my-8 p-3">
             <h1 className="mb-5 text-3xl font-light text-foreground">
                 Timeline
             </h1>
 
-            <div className="relative  px-5 py-6  text-light mx-auto px-4">
+            <div className="relative text-light mx-auto py-6">
                 {/* The continuous vertical line */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-foreground -translate-x-1/2 z-0"></div>
+                <div className="absolute left-7 lg:left-1/2 top-0 bottom-0 w-[1px] bg-foreground -translate-x-1/2 z-0"></div>
                 {workHistory.map((job, index) => {
                     // Logic to determine sides and active state
                     const isEven = index % 2 === 0;
@@ -37,11 +37,11 @@ export default function Experience() {
                     return (
                         <div
                             key={index}
-                            className="grid grid-cols-[1fr_auto_1fr] gap-5 items-center mb-8 relative z-10 "
+                            className="grid grid-cols-[auto_1fr] lg:grid-cols-[1fr_auto_1fr] gap-5 items-center mb-8 relative z-10"
                         >
                             {/* Left Column */}
                             <div
-                                className={`text-right ${isEven ? "invisible" : "visible"}`}
+                                className={`hidden lg:block text-right ${isEven ? "invisible" : "visible"}`}
                             >
                                 <h3 className="text-foreground text-lg">
                                     {job.company}
@@ -55,7 +55,7 @@ export default function Experience() {
                             </div>
 
                             {/* Center Column (The Dot) */}
-                            <div className="flex justify-center items-center px-2 ">
+                            <div className="flex justify-center items-center px-0 lg:px-2 z-10">
                                 <div
                                     className={`w-14 h-14 rounded-full flex justify-center items-center shadow-sm ${
                                         isActive
@@ -75,7 +75,7 @@ export default function Experience() {
 
                             {/* Right Column */}
                             <div
-                                className={`text-left ${isEven ? "visible" : "invisible"}`}
+                                className={`text-left ${!isEven ? "lg:invisible" : "visible"}`}
                             >
                                 <h3 className="text-foreground text-lg">
                                     {job.company}
