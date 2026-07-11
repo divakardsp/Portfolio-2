@@ -45,7 +45,7 @@ function Cta() {
                     <span>View Resume / CV</span>
                 </a>
                 <a
-                    href="mailto:divakarpurva04@gmail.com?subject=Hello from your Portfolio"
+                    href="mailto:divakarpurva04@gmail.com"
                     className="
                         group
                         flex items-center gap-2
