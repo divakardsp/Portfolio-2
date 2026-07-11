@@ -60,7 +60,7 @@ export default function Experience() {
                                     className={`w-14 h-14 rounded-full flex justify-center items-center shadow-sm ${
                                         isActive
                                             ? "bg-[#444444]"
-                                            : "bg-gray-300 bg-opacity-60"
+                                            : "bg-gray-400 bg-opacity-60"
                                     }`}
                                 >
                                     <div
