@@ -18,7 +18,7 @@ function LeftSection() {
                         backgroundRepeat: "repeat",
                     }}
                 />
-                <div className="p-4 ">
+                <div className="p-4 flex flex-col h-full">
                     <Initial />
                     <Name />
                     <Photo />
