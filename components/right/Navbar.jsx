@@ -14,22 +14,38 @@ function Navbar() {
                 <div className=" hidden lg:block w-xl m-auto bg-surface border border-1 border-border border-dashed rounded-4xl transition-colors duration-100">
                     <ul className="flex flex-1 justify-between items-center px-5 py-3">
                         <li>
-                            <a className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg font-light tracking-tight  ">
+                            {/* THE FIX: Added href="#skills" */}
+                            <a
+                                href="#skills"
+                                className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg font-light tracking-tight"
+                            >
                                 Skills & Tools
                             </a>
                         </li>
                         <li>
-                            <a className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light ">
+                            {/* THE FIX: Added href="#about" */}
+                            <a
+                                href="#about"
+                                className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light"
+                            >
                                 About
                             </a>
                         </li>
                         <li>
-                            <a className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light ">
+                            {/* THE FIX: Added href="#experience" */}
+                            <a
+                                href="#experience"
+                                className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light"
+                            >
                                 Experience
                             </a>
                         </li>
                         <li>
-                            <a className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light ">
+                            {/* THE FIX: Added href="#projects" */}
+                            <a
+                                href="#projects"
+                                className="list-none cursor-pointer hover:text-foreground transition-colors duration-[100ms] ease-in text-lg tracking-tight font-light"
+                            >
                                 Projects
                             </a>
                         </li>

@@ -58,7 +58,7 @@ function SkillsTools() {
     console.log("resolved: ", resolvedTheme);
 
     return (
-        <div className="mt-15 mx-4 lg:mx-8 m-auto p-3">
+        <div id="skills" className="mt-15 mx-4 lg:mx-8 m-auto p-3">
             <div className="mb-8">
                 <h1 className="text-3xl font-light text-foreground">
                     Skills & Tools

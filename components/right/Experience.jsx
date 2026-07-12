@@ -21,7 +21,7 @@ const workHistory = [
 
 export default function Experience() {
     return (
-        <div className="mx-4 lg:mx-8 my-8 p-3">
+        <div id="experience" className="mx-4 lg:mx-8 my-8 p-3">
             <h1 className="mb-5 text-3xl font-light text-foreground">
                 Timeline
             </h1>

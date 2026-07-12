@@ -87,7 +87,7 @@ function Projects() {
     ];
 
     return (
-        <div className="mx-4 lg:mx-8 m-auto p-3">
+        <div id="projects" className="mx-4 lg:mx-8 m-auto p-3">
             <h1 className="mb-4 text-3xl font-light text-foreground">
                 Projects
             </h1>
