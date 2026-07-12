@@ -7,7 +7,7 @@ function Cta() {
         <div className="mx-4 lg:mx-8 mt-6 mb-2">
             <div className="flex flex-wrap items-center justify-center gap-6">
                 <a
-                    href="/resume.pdf"
+                    href="/Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
