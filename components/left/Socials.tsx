@@ -80,8 +80,8 @@ export default function SocialLinks() {
     ];
 
     return (
-        <div className="my-4 lg:my-8 w-full lg:w-1/2 mx-auto ">
-            <div className="flex flex-1 justify-around items-center">
+        <div className="mx-auto mt-4 mb-8 w-full ">
+            <div className="flex justify-center items-center gap-6">
                 {socialLinks.map((social) => {
                     return (
                         <ColorfulSocialButton

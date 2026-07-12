@@ -4,8 +4,8 @@ import { PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 
 function Cta() {
     return (
-        <div className="m-8 ">
-            <div className="p-8 flex flex-1 gap-2 items-center justify-around">
+        <div className="mx-4 lg:mx-8 mt-6 mb-2">
+            <div className="flex flex-wrap items-center justify-center gap-6">
                 <a
                     href="/resume.pdf"
                     target="_blank"
