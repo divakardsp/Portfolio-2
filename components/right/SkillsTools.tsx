@@ -54,16 +54,16 @@ function SkillsTools() {
 
     const isDarkMode = resolvedTheme === "dark";
 
-    console.log("Theme: ", theme);
-    console.log("resolved: ", resolvedTheme);
-
     return (
-        <div id="skills" className="mt-15 mx-4 lg:mx-8 m-auto p-3">
+        <div
+            id="skills"
+            className="mt-12 lg:mt-15 mx-3 lg:mx-8 m-auto p-2 lg:p-3"
+        >
             <div className="mb-8">
                 <h1 className="text-3xl font-light text-foreground">
                     Skills & Tools
                 </h1>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-1.5 lg:gap-2">
                     {skills.map((item) => {
                         const source =
                             dark.includes(item.name) && isDarkMode
@@ -73,15 +73,14 @@ function SkillsTools() {
                         return (
                             <div
                                 key={item.name}
-                                className="flex items-center gap-2 rounded-2xl border border-dashed border-border bg-surface px-4 py-3 text-foreground "
+                                className="flex items-center gap-1.5 lg:gap-2 rounded-xl lg:rounded-2xl border border-dashed border-border bg-surface px-3 py-2 lg:px-4 lg:py-3 text-foreground"
                             >
                                 <img
-                                    key={source}
                                     src={source}
                                     alt={`${item.name} logo`}
-                                    className="w-6 h-6object-contain"
+                                    className="w-5 h-5 lg:w-6 lg:h-6 object-contain"
                                 />
-                                <span className="text-sm font-light">
+                                <span className="text-xs lg:text-sm font-light">
                                     {item.name}
                                 </span>
                             </div>
