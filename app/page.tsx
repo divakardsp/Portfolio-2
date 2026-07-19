@@ -38,11 +38,18 @@ export default function Home() {
                 ) : (
                     <motion.div
                         className="flex flex-col lg:flex-row min-h-screen"
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.3,
+                        initial={{ opacity: 0, y: 60 }}
+                        animate={{
+                            opacity: 1,
+                            y: 0,
                         }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 250,
+                            damping: 10,
+                        }}
+
+                        
                     >
                         <LeftSection />
                         <RightSection />
