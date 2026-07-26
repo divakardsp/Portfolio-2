@@ -22,6 +22,7 @@ function Projects() {
                     value: "Implemented authentication, subscription billing, and a feature-based architecture for scalability.",
                 },
             ],
+            live: "code-dog-nvoq.vercel.app",
             repo: "https://github.com/divakardsp/CodeDog",
         },
         {
@@ -42,6 +43,7 @@ function Projects() {
                     value: "Built a modular backend with Express, Drizzle ORM, PostgreSQL, and reusable validation middleware.",
                 },
             ],
+            live:"https://fortify-3.onrender.com",
             repo: "https://github.com/divakardsp/Fortify",
         },
         {
@@ -62,6 +64,7 @@ function Projects() {
                     value: "Designed an event-driven architecture with authenticated sockets and message-driven communication.",
                 },
             ],
+            live:"https://tracekaf.onrender.com",
             repo: "https://github.com/divakardsp/TraceKaf",
         },
         {
