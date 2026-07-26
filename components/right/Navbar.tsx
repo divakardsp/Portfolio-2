@@ -1,11 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { CircleHalfTiltIcon, ListIcon, XIcon } from "@phosphor-icons/react";
+import { CircleHalfTiltIcon, } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 
 function Navbar() {
-    const { theme, setTheme, resolvedTheme } = useTheme();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const {  setTheme, resolvedTheme } = useTheme();
 
     const isDark = resolvedTheme === "dark";
     return (
