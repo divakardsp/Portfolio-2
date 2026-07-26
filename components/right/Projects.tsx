@@ -1,5 +1,9 @@
 "use client";
-import { LinkIcon } from "@phosphor-icons/react";
+import {
+    ArrowSquareOutIcon,
+    GithubLogoIcon,
+    LinkIcon,
+} from "@phosphor-icons/react";
 import React from "react";
 
 function Projects() {
@@ -22,7 +26,7 @@ function Projects() {
                     value: "Implemented authentication, subscription billing, and a feature-based architecture for scalability.",
                 },
             ],
-            live: "code-dog-nvoq.vercel.app",
+            live: "https://code-dog-nvoq.vercel.app",
             repo: "https://github.com/divakardsp/CodeDog",
         },
         {
@@ -43,7 +47,7 @@ function Projects() {
                     value: "Built a modular backend with Express, Drizzle ORM, PostgreSQL, and reusable validation middleware.",
                 },
             ],
-            live:"https://fortify-3.onrender.com",
+            live: "https://fortify-3.onrender.com",
             repo: "https://github.com/divakardsp/Fortify",
         },
         {
@@ -64,13 +68,13 @@ function Projects() {
                     value: "Designed an event-driven architecture with authenticated sockets and message-driven communication.",
                 },
             ],
-            live:"https://tracekaf.onrender.com",
+            live: "https://tracekaf.onrender.com",
             repo: "https://github.com/divakardsp/TraceKaf",
         },
         {
-            name: "One Million Checkboxes",
+            name: "OMCB",
             description:
-                "A collaborative real-time checkbox application where every connected user sees state changes instantly.",
+                "A real-time collaborative application inspired by One Million Checkboxes, where every connected user sees checkbox state changes instantly.",
             highlights: [
                 {
                     id: 1,
@@ -100,16 +104,38 @@ function Projects() {
                     key={project.repo}
                     className="bg-surface border border-border border-dashed px-5 py-6 rounded-2xl text-light mb-4"
                 >
-                    <div className="flex gap-3 items-start">
-                        <h1 className="text-xl font-extralight text-foreground mb-1">
-                            {project.name}
-                        </h1>
-                        <a href={project.repo} target="_blank">
-                            <LinkIcon
-                                size={25}
-                                className="text-muted cursor-pointer hover:text-foreground transition-colors duration-150 ease-in"
-                            />
-                        </a>
+                    <div className="flex items-center justify-between">
+                        <div className="flex gap-1 items-start ">
+                            <h1 className="text-xl font-extralight text-foreground mb-1">
+                                {project.name}
+                            </h1>
+
+                            <div className="flex justify-between items-center gap-1 px-2 py-1 p-auto rounded-2xl">
+                                <a href={project.repo} target="_blank">
+                                    <GithubLogoIcon
+                                        size={19}
+                                        className="text-muted cursor-pointer hover:text-foreground transition-colors duration-150 ease-in"
+                                    />
+                                </a>
+
+                                {project.live && (
+                                    <a href={project.live} target="_blank">
+                                        <ArrowSquareOutIcon
+                                            size={19}
+                                            className="text-muted cursor-pointer hover:text-foreground transition-colors duration-150 ease-in"
+                                        />
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+
+                        {project.live && (
+                            <div className=" rounded-3xl border border-dashed border-emerald-500 bg-main px-3 py-1">
+                                <span className="text-sm font-light tracking-wide text-emerald-600">
+                                    LIVE
+                                </span>
+                            </div>
+                        )}
                     </div>
 
                     <p className="text-lg tracking-tight leading-7">
