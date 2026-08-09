@@ -4,7 +4,7 @@ const workHistory = [
     {
         company: "ChaiCode Cohort 26",
         role: "Student",
-        date: "Dec 2025 - present",
+        date: "Dec 2025 - July 2026",
     },
     {
         company: "EaseCommerce",
