@@ -9,6 +9,27 @@ import React from "react";
 function Projects() {
     const projects = [
         {
+            name: "Arbell",
+            description:
+                "An agentic commerce platform built for the Razorpay Buildathon that enables conversational product discovery, inventory management, and secure AI-driven payments.",
+            highlights: [
+                {
+                    id: 1,
+                    value: "Built an agentic shopping experience using MCP and A2UI, enabling AI agents to discover, compare, and recommend products through natural language.",
+                },
+                {
+                    id: 2,
+                    value: "Integrated Razorpay Standard Checkout and UPI Reserve Pay with payment authorization, pre-debit notifications, webhooks, and automated order creation.",
+                },
+                {
+                    id: 3,
+                    value: "Designed a scalable backend with Next.js, TypeScript, Drizzle ORM, PostgreSQL, and event logging for agent observability, inventory management, and order processing.",
+                },
+            ],
+            live: "https://arbell-one.vercel.app/",
+            repo: "https://github.com/divakardsp/arbell",
+        },
+        {
             name: "CodeDog",
             description:
                 "An AI-powered GitHub application that reviews pull requests, manages repositories, and automates developer workflows.",
@@ -68,7 +89,6 @@ function Projects() {
                     value: "Designed an event-driven architecture with authenticated sockets and message-driven communication.",
                 },
             ],
-            live: "https://tracekaf.onrender.com",
             repo: "https://github.com/divakardsp/TraceKaf",
         },
         {

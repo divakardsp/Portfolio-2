@@ -8,6 +8,7 @@ function SkillsTools() {
     const skills = [
         { name: "JavaScript", logo: "/Javascript.svg" },
         { name: "TypeScript", logo: "/Typescript.svg" },
+        { name: "SQL", logo: "/SQL.svg" },
         { name: "React", logo: "/React.svg" },
         { name: "Next.js", logo: "/Next.js.svg" },
         { name: "Tailwind CSS", logo: "/Tailwind.svg" },
@@ -29,6 +30,10 @@ function SkillsTools() {
         { name: "Gitlab", logo: "/Gitlab.svg" },
         { name: "Postman", logo: "/Postman.svg" },
         { name: "Requestly", logo: "/Requestly.svg" },
+        { name: "Inngest", logo: "/Inngest.svg"},
+        { name: "OpenAI", logo: "/OpenAI.svg"},
+        { name: "MCP", logo: "/MCP.svg"},
+        { name: "Pinecone", logo: "/Pinecone.svg"}
     ];
 
     const dark = [
@@ -38,6 +43,10 @@ function SkillsTools() {
         "Kafka",
         "Socket.IO",
         "Linux",
+        "Inngest",
+        "MCP",
+        "OpenAI",
+        "Pinecone"
     ];
 
     const { theme, resolvedTheme } = useTheme();
