@@ -2,9 +2,9 @@
 import {
     ArrowSquareOutIcon,
     GithubLogoIcon,
-    LinkIcon,
 } from "@phosphor-icons/react";
 import React from "react";
+import { motion } from "motion/react";
 
 function Projects() {
     const projects = [
@@ -114,35 +114,51 @@ function Projects() {
     ];
 
     return (
-        <div id="projects" className="mx-4 lg:mx-8 m-auto p-3">
-            <h1 className="mb-4 text-3xl font-light text-foreground">
+        <div id="projects" className="scroll-mt-16 sm:scroll-mt-20 mx-2 sm:mx-4 lg:mx-8 m-auto p-2 sm:p-3">
+            <h2 className="mb-4 sm:mb-5 text-2xl sm:text-3xl font-light text-foreground">
                 Projects
-            </h1>
+            </h2>
 
             {projects.map((project) => (
-                <div
+                <motion.div
                     key={project.repo}
-                    className="bg-surface border border-border border-dashed px-5 py-6 rounded-2xl text-light mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-30px" }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-surface border border-border border-dashed p-4 sm:p-5 lg:px-5 lg:py-6 rounded-2xl mb-4 sm:mb-5 transition-all duration-300 shadow-sm"
                 >
-                    <div className="flex items-center justify-between">
-                        <div className="flex gap-1 items-start ">
-                            <h1 className="text-xl font-extralight text-foreground mb-1">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                        <div className="flex items-center gap-2">
+                            <h3 className="text-lg sm:text-xl font-medium sm:font-extralight text-foreground">
                                 {project.name}
-                            </h1>
+                            </h3>
 
-                            <div className="flex justify-between items-center gap-1 px-2 py-1 p-auto rounded-2xl">
-                                <a href={project.repo} target="_blank">
+                            <div className="flex items-center gap-1">
+                                <a
+                                    href={project.repo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`${project.name} repository`}
+                                    className="p-1 rounded-md text-muted hover:text-foreground active:scale-90 transition-all cursor-pointer"
+                                >
                                     <GithubLogoIcon
-                                        size={19}
-                                        className="text-muted cursor-pointer hover:text-foreground transition-colors duration-150 ease-in"
+                                        size={20}
+                                        className="transition-colors duration-150"
                                     />
                                 </a>
 
                                 {project.live && (
-                                    <a href={project.live} target="_blank">
+                                    <a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${project.name} live demo`}
+                                        className="p-1 rounded-md text-muted hover:text-foreground active:scale-90 transition-all cursor-pointer"
+                                    >
                                         <ArrowSquareOutIcon
-                                            size={19}
-                                            className="text-muted cursor-pointer hover:text-foreground transition-colors duration-150 ease-in"
+                                            size={20}
+                                            className="transition-colors duration-150"
                                         />
                                     </a>
                                 )}
@@ -150,26 +166,34 @@ function Projects() {
                         </div>
 
                         {project.live && (
-                            <div className=" rounded-3xl border border-dashed border-emerald-500 bg-main px-3 py-1">
-                                <span className="text-sm font-light tracking-wide text-emerald-600">
+                            <div className="rounded-full border border-dashed border-emerald-500/80 bg-main px-2.5 py-0.5 flex items-center gap-1.5 shadow-xs">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+                                </span>
+                                <span className="text-xs font-light tracking-wide text-emerald-600">
                                     LIVE
                                 </span>
                             </div>
                         )}
                     </div>
 
-                    <p className="text-lg tracking-tight leading-7">
+                    <p className="text-sm sm:text-base lg:text-lg tracking-tight leading-relaxed sm:leading-7 text-muted mb-3">
                         {project.description}
                     </p>
-                    <br />
 
-                    {project.highlights.map((highlight) => (
-                        <p
-                            key={highlight.id}
-                            className="font-light tracking-normal leading-7"
-                        >{`- ${highlight.value}`}</p>
-                    ))}
-                </div>
+                    <div className="space-y-1.5 pt-2 border-t border-dashed border-border/60">
+                        {project.highlights.map((highlight) => (
+                            <div
+                                key={highlight.id}
+                                className="flex items-start gap-2 text-xs sm:text-sm lg:text-base font-light tracking-normal leading-relaxed text-muted"
+                            >
+                                <span className="text-emerald-500/80 mt-1 select-none text-[9px]">◆</span>
+                                <span>{highlight.value}</span>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
             ))}
         </div>
     );
