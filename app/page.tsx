@@ -23,17 +23,19 @@ export default function Home() {
                 {showIntro ? (
                     <motion.div
                         key="intro"
-                        className="fixed inset-0 flex items-center justify-center bg-main"
+                        className="fixed inset-0 flex items-center justify-center bg-main p-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <DotLottieReact
-                            src="/Hello.lottie"
-                            autoplay
-                            loop={false}
-                        />
+                        <div className="w-60 h-60 sm:w-80 sm:h-80 flex items-center justify-center">
+                            <DotLottieReact
+                                src="/Hello.lottie"
+                                autoplay
+                                loop={false}
+                            />
+                        </div>
                     </motion.div>
                 ) : (
                     <motion.div
