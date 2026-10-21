@@ -4,25 +4,28 @@ import { PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 
 function Cta() {
     return (
-        <div className="mx-4 lg:mx-8 mt-6 mb-2">
-            <div className="flex flex-wrap items-center justify-center gap-6">
+        <div className="mx-2 sm:mx-4 lg:mx-8 mt-4 sm:mt-6 mb-2">
+            <div className="flex items-center justify-center gap-3 sm:gap-6 w-full">
                 <a
                     href="/Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
                         group
-                        flex items-center gap-2
+                        flex-1 sm:flex-initial
+                        flex items-center justify-center gap-2
                         rounded-xl
-                        border border-dashed
+                        border border-dashed border-border
                         bg-cta
-                        px-5 py-3
-                        transition-all duration-300
+                        px-3.5 py-2.5 sm:px-5 sm:py-3
+                        text-sm sm:text-base font-medium
+                        text-foreground
+                        transition-all duration-200
                         hover:scale-[1.02]
-                        active:translate-y-0
-                        active:shadow-none
+                        active:scale-95
                         cursor-pointer
                         relative
+                        shadow-sm
                     "
                 >
                     {/* Noise Overlay */}
@@ -34,7 +37,7 @@ function Cta() {
                         }}
                     />
                     <ReadCvLogoIcon
-                        size={24}
+                        size={22}
                         className="
                             transition-transform
                             duration-300
@@ -48,17 +51,20 @@ function Cta() {
                     href="mailto:divakarpurva04@gmail.com"
                     className="
                         group
-                        flex items-center gap-2
+                        flex-1 sm:flex-initial
+                        flex items-center justify-center gap-2
                         rounded-xl
-                        border border-dashed
+                        border border-dashed border-border
                         bg-cta
-                        px-5 py-3
-                        transition-all duration-300
+                        px-3.5 py-2.5 sm:px-5 sm:py-3
+                        text-sm sm:text-base font-medium
+                        text-foreground
+                        transition-all duration-200
                         hover:scale-[1.02]
-                        active:translate-y-0
-                        active:shadow-none
+                        active:scale-95
                         cursor-pointer
                         relative
+                        shadow-sm
                     "
                 >
                     {/* Noise Overlay */}
@@ -71,7 +77,7 @@ function Cta() {
                     />
 
                     <PaperPlaneTiltIcon
-                        size={20}
+                        size={19}
                         className="
                             transition-transform
                             duration-300
