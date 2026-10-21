@@ -15,9 +15,10 @@ function ColorfulSocialButton({
 }: ColorfulSocialButtonProps) {
     return (
         <div className="relative group inline-block">
-            {/* The Tooltip (Adapts to your theme automatically) */}
+            {/* The Tooltip (Desktop hover) */}
             <div
                 className="
+                hidden sm:block
                 absolute -top-10 left-1/2 -translate-x-1/2 
                 px-2 py-1 rounded-md text-xs font-medium whitespace-nowrap
                 bg-foreground text-main
@@ -36,18 +37,19 @@ function ColorfulSocialButton({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={label}
                 className="
-                    flex items-center justify-center w-14 h-14
+                    flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14
                     rounded-full 
                     bg-surface border border-dashed border-border
-                    transition-all duration-300 cursor-pointer
+                    transition-all duration-300 hover:scale-105 active:scale-90 cursor-pointer shadow-sm
                 "
             >
                 {/* The Standard HTML img Tag for colorful SVGs */}
                 <img
                     src={iconSrc}
                     alt={`${label} logo`}
-                    className="w-8 h-8 object-contain"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
                 />
             </Link>
         </div>
@@ -80,8 +82,8 @@ export default function SocialLinks() {
     ];
 
     return (
-        <div className="mx-auto mt-4 mb-8 w-full ">
-            <div className="flex justify-center items-center gap-6">
+        <div className="mx-auto mt-3 sm:mt-4 mb-6 sm:mb-8 w-full">
+            <div className="flex justify-center items-center gap-3.5 sm:gap-6">
                 {socialLinks.map((social) => {
                     return (
                         <ColorfulSocialButton
