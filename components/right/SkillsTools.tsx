@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { motion } from "motion/react";
 
 function SkillsTools() {
     const skills = [
@@ -57,32 +57,34 @@ function SkillsTools() {
     }, []);
 
     if (!mounted) {
-        console.log("Not mounted yet");
         return null;
     }
 
     const isDarkMode = resolvedTheme === "dark";
 
     return (
-        <div
+        <motion.div
             id="skills"
-            className="mt-12 lg:mt-15 mx-3 lg:mx-8 m-auto p-2 lg:p-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4 }}
+            className="scroll-mt-16 sm:scroll-mt-20 mt-8 sm:mt-12 lg:mt-15 mx-2 sm:mx-4 lg:mx-8 m-auto p-2 lg:p-3"
         >
             <div className="mb-8">
-                <h1 className="text-3xl font-light text-foreground">
+                <h2 className="text-2xl sm:text-3xl font-light text-foreground">
                     Skills & Tools
-                </h1>
-                <div className="mt-5 flex flex-wrap gap-1.5 lg:gap-2">
+                </h2>
+                <div className="mt-4 sm:mt-5 flex flex-wrap gap-2 lg:gap-2">
                     {skills.map((item) => {
                         const source =
                             dark.includes(item.name) && isDarkMode
                                 ? `/${item.name}-Light.svg`
                                 : item.logo;
-                        console.log(`${item.name} : ${source}`);
                         return (
                             <div
                                 key={item.name}
-                                className="flex items-center gap-1.5 lg:gap-2 rounded-xl lg:rounded-2xl border border-dashed border-border bg-surface px-3 py-2 lg:px-4 lg:py-3 text-foreground"
+                                className="flex items-center gap-1.5 lg:gap-2 rounded-xl lg:rounded-2xl border border-dashed border-border bg-surface px-2.5 py-1.5 sm:px-3 sm:py-2 lg:px-4 lg:py-3 text-foreground transition-all duration-200 active:scale-95 shadow-sm"
                             >
                                 <img
                                     src={source}
@@ -97,7 +99,7 @@ function SkillsTools() {
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
