@@ -10,7 +10,7 @@ function RightSection() {
     return (
         <>
             <section className="min-h-screen w-full lg:w-3/5 bg-main transition-colors duration-[700ms] text-muted">
-                <div className="p-4">
+                <div className="p-2 sm:p-4 lg:p-4">
                     <Navbar />
                     <SkillsTools/>
                     <About />
