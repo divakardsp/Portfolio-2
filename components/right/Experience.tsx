@@ -4,6 +4,18 @@ import { motion } from "motion/react";
 
 const workHistory = [
     {
+        company: "ChaiCode GenAI Cohort 26",
+        role: "Student",
+        date: "Oct 2025 - Present",
+    },
+
+    {
+        company: "Razorpay AI Buildathon",
+        role: "Participant",
+        date: "Aug 2026 - Sep 2026",
+    },
+
+    {
         company: "ChaiCode Cohort 26",
         role: "Student",
         date: "Dec 2025 - July 2026",
@@ -16,7 +28,7 @@ const workHistory = [
     {
         company: "Bennett University",
         role: "Student (Btech in Computer Science)",
-        date: "Aug 2023 - present",
+        date: "Aug 2023 - Present",
     },
 ];
 
